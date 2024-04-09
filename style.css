@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat&family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+a {
+    color: aliceblue;
+}
+
+body {
+    background-color: rgb(237, 237, 237);
+    justify-content: center;
+    /*
+    width: 80rem;
+    height: auto;
+    */
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /*background-color: #fff;*/
+    height: auto;
+    width: 1000px;
+    box-shadow: 0 0 20px rgba (0, 0, 0, 0.4);
+    margin: auto;
+    margin-top: 1em;
+    border-radius: 25px;
+}
+.card {
+    border: 30px;
+    border-color: darkorange;
+}
+header {
+    background-color: black;
+    justify-content:space-between; 
+    height: auto;
+    width: 1000px;
+    box-shadow: 0 0 20px rgba (0, 0, 0, 0.4);
+    margin: auto;
+    margin-top: 1em;
+    border-radius:25px;
+}
+
+.logos {
+    height: 5em;
+    width: auto;
+}
+
+main div {
+    align-items: center;
+}
+
+h1 {
+    color: darkorange;
+}
+
+h2 {
+    color: darkorange;
+}
+
+h3 {
+    color:dimgrey;
+    padding: 10px 10px;
+}
+
+h5 {
+    color: rgb(3, 102, 104);
+}
+
+button {
+    background-color:rgb(3, 102, 104);
+    justify-content:space-between; 
+    height: 25px;
+    width: 100px;
+    border-color: transparent;
+    box-shadow: 0 0 20px rgba (0, 0, 0, 0.4);
+    margin: auto;
+    margin-top: 1em;
+    border-radius:25px;
+}
+
+.deco {
+    height: auto;
+    width: 50%;
+}
+
+.decorativos {
+    flex-direction: row-reverse;
+}
+
+.cerramientos img {
+    height: 16em;
+    width: auto;
+}
+footer {
+    background-color: black;
+
+}
+footer h5 {
+    color: aliceblue;
+}
+
+.wasap {
+    height: 3em;
+    width: auto;
+}
