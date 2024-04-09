@@ -9,6 +9,7 @@
 
 a {
     color: aliceblue;
+    text-decoration:none;
 }
 
 body {
@@ -87,18 +88,21 @@ button {
 }
 
 .deco {
-    height: auto;
-    width: 50%;
+    height: 20rem;
+    width: auto;
 }
 
 .decorativos {
     flex-direction: row-reverse;
 }
 
+/*
 .cerramientos img {
     height: 16em;
     width: auto;
 }
+*/
+
 footer {
     background-color: black;
 
