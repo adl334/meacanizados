@@ -24,29 +24,34 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    /*align-items: center;*/
 
     /*background-color: #fff;*/
     height: auto;
-    width: 1000px;
+    width: 60rem;
     box-shadow: 0 0 20px rgba (0, 0, 0, 0.4);
     margin: auto;
     margin-top: 1em;
-    border-radius: 25px;
+    /*border-radius: 5rem;*/
 }
+
+/*
 .card {
     border: 30px;
     border-color: darkorange;
 }
+*/
+
 header {
     background-color: black;
     justify-content:space-between; 
     height: auto;
-    width: 1000px;
-    box-shadow: 0 0 20px rgba (0, 0, 0, 0.4);
+    width: 40rem;
+    box-shadow: 0 0 20rem rgba (0, 0, 0, 0.4);
+    padding: 2rem;
     margin: auto;
     margin-top: 1em;
-    border-radius:25px;
+    /*border-radius:25px;*/
 }
 
 .logos {
@@ -68,7 +73,7 @@ h2 {
 
 h3 {
     color:dimgrey;
-    padding: 10px 10px;
+    padding: 1rem;
 }
 
 h5 {
@@ -77,14 +82,22 @@ h5 {
 
 button {
     background-color:rgb(3, 102, 104);
+    color: aliceblue;
     justify-content:space-between; 
-    height: 25px;
-    width: 100px;
+    height: 3rem;
+    width: 20rem;
     border-color: transparent;
-    box-shadow: 0 0 20px rgba (0, 0, 0, 0.4);
+    box-shadow: 0 0 3rem rgba (0, 0, 0, 0.4);
     margin: auto;
     margin-top: 1em;
-    border-radius:25px;
+    border-radius:3rem;
+}
+button:hover {background-color:orange}
+
+button:active {
+  background-color:orange;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 
 .deco {
@@ -96,22 +109,48 @@ button {
     flex-direction: row-reverse;
 }
 
-/*
+.catalogo {
+    width: 100%;
+    height: auto;
+}
+
 .cerramientos img {
     height: 16em;
     width: auto;
 }
-*/
+
 
 footer {
     background-color: black;
+    padding: 1em;
+    justify-content: space-between;
+    align-content: top;
 
 }
 footer h5 {
     color: aliceblue;
 }
 
+footer th {
+    padding: 5px;
+    justify-content: initial;
+}
+
 .wasap {
-    height: 3em;
+    height: 2em;
     width: auto;
 }
+
+.row {
+    display: inline-block;
+    align-content: center;
+    justify-content: space-between;
+}
+  
+div.gallery img {
+    width: auto;
+    height: 15rem;
+  }
+
+
+  
