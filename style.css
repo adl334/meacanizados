@@ -3,18 +3,18 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: 'Poppins',sans-serif;
 }
 
-a {
-    color: aliceblue;
+a, p, h1, h2, h3, h4, h5, h6 {
+    color: #dfdfdf;
     text-decoration:none;
 }
 
 body {
-    background-color: rgb(237, 237, 237);
+    background-color: #dfdfdf;
     justify-content: center;
+    
     /*
     width: 80rem;
     height: auto;
@@ -26,31 +26,23 @@ body {
     justify-content: center;
     /*align-items: center;*/
 
-    /*background-color: #fff;*/
+    /*background-color: #fff;
     height: auto;
     width: 60rem;
+    */
     box-shadow: 0 0 20px rgba (0, 0, 0, 0.4);
     margin: auto;
     margin-top: 1em;
     /*border-radius: 5rem;*/
 }
 
-/*
-.card {
-    border: 30px;
-    border-color: darkorange;
-}
-*/
-
 header {
     background-color: black;
-    justify-content:space-between; 
+    display: flex;
+    justify-content: center;
     height: auto;
-    width: 40rem;
     box-shadow: 0 0 20rem rgba (0, 0, 0, 0.4);
     padding: 2rem;
-    margin: auto;
-    margin-top: 1em;
     /*border-radius:25px;*/
 }
 
@@ -59,29 +51,62 @@ header {
     width: auto;
 }
 
+main {
+    background: linear-gradient(black, #666);
+}
 main div {
     align-items: center;
+    
+}
+
+main div h1 {
+    color: darkorange;
+}
+
+main div h5 {
+    color:#e0b386;
+    text-align: end;
+    padding-right: 2em;
+
+}
+
+main div h4 {
+    color: #dfdfdf;
+    
+
+}
+
+main ul li {
+    display: flex;
+    justify-content: center;
 }
 
 h1 {
     color: darkorange;
+    text-align: center;
 }
 
 h2 {
     color: darkorange;
+    text-align: center;
 }
 
-h3 {
+h4 {
     color:dimgrey;
-    padding: 1rem;
+    text-align: center;
 }
 
 h5 {
     color: rgb(3, 102, 104);
 }
 
+.item {
+    color:#1f1f1f;
+    padding: none;
+}
+
 button {
-    background-color:rgb(3, 102, 104);
+    background-color: #3D7D91;
     color: aliceblue;
     justify-content:space-between; 
     height: 3rem;
@@ -90,7 +115,7 @@ button {
     box-shadow: 0 0 3rem rgba (0, 0, 0, 0.4);
     margin: auto;
     margin-top: 1em;
-    border-radius:3rem;
+    border-radius:25px;
 }
 button:hover {background-color:orange}
 
@@ -99,6 +124,9 @@ button:active {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
+ul {
+    list-style: none;
+}
 
 .deco {
     height: 20rem;
@@ -106,27 +134,116 @@ button:active {
 }
 
 .decorativos {
-    flex-direction: row-reverse;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.decorativos li div {
+    margin-left: 1em;
+    margin-top: 1em;
+    border: transparent;
+}
+.decorativos img {
+    padding: 1em;
 }
 
-.catalogo {
-    width: 100%;
-    height: auto;
+.cerra {
+    background: linear-gradient(#666, #bebebe);
+    text-align: center;
+    padding-bottom: 2em;
+}
+.cerra div h4 {
+    color: #dfdfdf;
+    padding-top: 1em;
+    margin-left: 1em;
+    
+    text-align: center;
 }
 
 .cerramientos img {
     height: 16em;
     width: auto;
+    padding: 1em;
 }
 
+.cerramientos div ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    }
+
+.cerramientos div ul li p {
+    justify-content: center;
+    flex: content;
+    text-align: center;
+}
+.cerramientos div ul li {
+    margin-left: 1em;
+    margin-top: 1em;
+    border: transparent;
+}
+.cat {
+    padding: 2rem;
+}
+
+.catalogo {
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.catalogo a {
+    padding: 1rem;
+}
+
+.catalogo h2 {
+    color: orange;
+}
+.cat-p {
+    padding-top: 2rem;
+}
+
+.card {
+    background-color: #dfdfdf;
+    border-color: transparent;
+ }
+.opcionales {
+    padding: 2rem;
+}
+
+.opcionales h2 {
+    color: orange;
+}
 
 footer {
-    background-color: black;
-    padding: 1em;
-    justify-content: space-between;
-    align-content: top;
+    background-color: #444444;
+    color: #dfdfdf;
+    padding: 20px 0;
+  }
+  
+  footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  footer li {
+    margin: 0 10px;
+  }
+  
+  footer img {
+    height: 10rem;
+    /*max-height: 100%;*/
+    vertical-align: middle;
+  }
 
-}
 footer h5 {
     color: aliceblue;
 }
@@ -151,6 +268,15 @@ div.gallery img {
     width: auto;
     height: 15rem;
   }
+/* Estilos para hacer el diseño responsive */
+@media screen and (max-width: 600px) {
+    section {
+        padding: 10px;
+    }
+    img {
+        max-width: 100%;
+    }
+    }
 
 
   
