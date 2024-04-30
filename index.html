@@ -6,118 +6,483 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="style.css">
-    <!--<link rel="stylesheet" href="estilo.css">-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css
     ">
 
+<!--GALERIA DE IMAGENES -----------------
+https://postimg.cc/gallery/1Q3bwQc
+-->
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat&family=Poppins:wght@400;500;600&display=swap');
+
+
+        /*
+        PALETA DE COLORES
+        KEA {
+            color: #9b9b97;
+            color: #e0b386;
+        }
+        ZYX {
+            color: #e67d14;
+            color: #474747;
+            color: #444444;
+            color: #303030;
+            color: #aaa8a9;
+            color: #bebebe;
+            color: #dfdfdf;
+        }
+        */
+
+
+        /**/
+        /*RESET****************************************************/
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #E0D1C2;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2em;
+            /* Por ejemplo, tamaño de fuente 2 veces el tamaño predeterminado */
+        }
+
+        h4 {
+            color: #1b0d0d;
+
+        }
+
+        body {
+            background-color: #dfdfdf;
+            justify-content: center;
+
+            /*
+            width: 80rem;
+            height: auto;
+            */
+        }
+
+       /* .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /*align-items: center;*/
+
+            /*
+            background-color: #fff;
+            height: auto;
+            width: 60rem;
+            *//*
+            box-shadow: 0 0 20px rgba (0, 0, 0, 0.4);
+            margin: auto;
+            margin-top: 1em;
+            /*border-radius: 5rem;}*/
+       
+
+        header {
+            background-color: #FAFAFA;
+            display: flex;
+            justify-content: center;
+            height: auto;
+            box-shadow: 0 0 20rem rgba (0, 0, 0, 0.4);
+            padding: 2rem;
+            /*border-radius:25px;*/
+        }
+
+        .logos {
+            max-height: 5em;
+            width: auto;
+        }
+
+        main {
+            background: linear-gradient(#FAFAFA, #dfdfdf);
+        }
+
+        main div {
+            align-items: center;
+
+        }
+
+        .title {
+            color: #e0b386;
+            text-align: center;
+            font-size: 3em;
+            line-height: 1;
+            text-shadow: 0 3px 3px #333, 0 -3px 3px goldenrod;
+            margin: 0;
+            padding: 0;
+
+        }
+
+        main div h4 {
+            color: #8B8279;
+            text-align: center;
+        }
+
+        main ul li {
+            display: flex;
+            justify-content: center;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .card {
+            background-color: #FAFAFA;
+            border: transparent;
+            max-height: 100%;
+            max-width: auto;
+            padding: 1em;
+            /*margin: 1em;*/
+        }
+
+        .card img {
+            max-width: auto;
+            max-height: fit-content;
+        }
+
+        .card p {
+            color: #1b0d0d;
+            padding-top: 1em;
+        }
+
+        .deco {
+            height: 20rem;
+            width: auto;
+        }
+
+        .decorativos {
+            list-style-type: none;
+            border: transparent;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .decorativos li  {
+            margin-top: 1em;
+            margin-right: 0.5em;
+        }
+   
+        .cerra {
+            background: linear-gradient(#dfdfdf, #E09487, #FF7777);
+            text-align: center;
+            padding-bottom: 2em;
+        }
+
+        .cerramientos {
+            padding-top: 2em;
+        }
+
+        .cerramientos img {
+            max-height: 100%;
+            width: auto;
+        }
+
+        .cerramientos ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .cerramientos ul li {
+            border: transparent;
+            align-items: center;
+            margin-top: 1em;
+            margin-right: 0.5em;
+        }
+
+        .cat {
+            background-color: #FAFAFA;
+            padding: 2rem;
+        }
+
+        .catalogo {
+            width: auto;
+            max-height: 100%;
+            text-align: center;
+        }
+
+        .catalogo a {
+            padding: 1rem;
+        }
+
+        .catalogo h2 {
+            color: #e0b386;
+        }
+
+        .cat-p {
+            padding-top: 2rem;
+        }
+
+        .catalogo button {
+                    background-color: #FF7777;
+                    color: aliceblue;
+                    justify-content: space-between;
+                    height: 3rem;
+                    width: 75%;
+                    border-color: transparent;
+                    box-shadow: 0 0 3rem rgba (0, 0, 0, 0.4);
+                    margin: auto;
+                    margin-top: 1em;
+                    border-radius: 25px;
+        }
+
+        button:hover {
+            background-color: #e0b386
+        }
+
+        button:active {
+            background-color: #e0b386;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .opcionales {
+            padding: 2rem;
+        }
+
+        .opcionales h2 {
+            color: #FF7777;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #1b0d0d;
+            color: #dfdfdf;
+            padding: 20px 0;
+        }
+
+        footer ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        footer li {
+            margin: 0 2rem;
+        }
+
+        footer img {
+            height: 100%;
+        }
+
+        footer button {
+            background-color: #e0b386;
+            color: aliceblue;
+            justify-content: space-between;
+            height: 3rem;
+            width: 150%;
+            border-color: transparent;
+            box-shadow: 0 0 3rem rgba (0, 0, 0, 0.4);
+            margin-top: 1em;
+            border-radius: 15px;
+        }
+
+        footer button:hover {
+            background-color: #FF7777;
+        }
+
+        .tel {
+            margin: 0;
+            padding: 1rem, 0;
+        }
+
+        footer a p{
+            color: #e0b386;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer p:hover {
+            color: #FF7777
+        }
+
+        footer p:active {
+            color: #FF7777;
+            box-shadow: 0 5px #e0b386;
+            transform: translateY(4px);
+        }
+
+        .wasap {
+            height: 2em;
+            width: auto;
+            margin-bottom: 0.5rem;
+        }
+
+        .row {
+            display: flex;
+            align-content: center;
+            justify-content: space-between;
+        }
+
+        /* Estilos para hacer el diseño responsive */
+        @media screen and (max-width: 90%) {
+            section {
+                padding: 1em;
+            }
+
+            img {
+                max-width: 100%;
+            }
+        }
+
+        /* Para pantallas de hasta 800px de ancho */
+        @media (max-width: 90%) {
+         /* Estilos CSS para dispositivos móviles */
+        }
+
+        /* Para pantallas más grandes de 800px hasta 1024px */
+        @media (min-width: 90%) and (max-width: 90%) {
+        /* Estilos CSS para tabletas y pantallas más grandes */
+        }
+
+        /* Estilos para hacer la galería responsive */
+        @media screen and (max-width: 60%) {
+        .image-container {
+            justify-content: center;
+        }
+
+        .image-container img {
+            max-width: calc(100%); /* Dos imágenes por fila */
+            justify-content: center;
+        }
+}
+    </style>
+
+<!--SCRIPTS ---------------------------------------------->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+           integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+           crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+           integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+           crossorigin="anonymous"></script>
+
+<!--TITULO DE PAGINA ---------------------------------------------->
     <title>Mecanizados</title>
+
 </head>
 
 <body>
-    <header class="">
+    <header>
         <div>
-           <img src="imagenes/Keha-Liso-2-TRANSPARENTE.png" class="logos" alt="logo">
+            <img src="https://i.postimg.cc/2yr7WmVB/Keha-Liso-2-TRANSPARENTE.png"
+                class="logos" alt="logo">
         </div>
     </header>
 
-    <main class="">
+    <main>
         <div>
             <p class="title">PANELES DECORATIVOS</p>
             <h4>Fabricamos paneles decorativos en chapas caladas</h4>
         </div>
-        <ul class="decorativos">
-            <li class="">
+
+        <ul class="decorativos image-container">
+            <li>
                 <div class="card">
-                    <img src="imagenes/IMG_20240330_164606856.jpg" alt="reja decorativa" class="deco">
-                    <p class="item">Uso decorativo</p>
+                    <img src="https://i.postimg.cc/np1R8588/IMG-20240330-164606856.jpg" alt="reja decorativa" class="deco">
+                    <p>Uso decorativo</p>
                 </div>
             </li>
 
-            <li class="">
+            <li class="image-container">
                 <div class="card">
-                    <img src="imagenes/divisor-amb.jpg" alt="divisor de ambiente" class="deco">
-                    <p class="item">Divisor de ambientes</p>
+                    <img src="https://i.postimg.cc/RCLRB3D1/divisor-amb.jpg" alt="divisor de ambiente" class="deco">
+                    <p>Divisor de ambientes</p>
                 </div>
             </li>
         </ul>
     </main>
 
     <div class="cerra">
-       <!-- <div>
-            <h4>Las chapas de 1,6 y 2 mm al poder soldarse y ser más resistentes las recomendamos para cerramientos
-                (balcones, rejas, portones, escaleras).</h4>
-        </div> -->
-
         <div class="cerramientos">
-            <div class="row">
-                <ul class="responsive">
-                    <li class="gallery card">
-                        <img src="imagenes/balcones.jpg" alt="balcon">
-                        <p class="item">Balcones</p>
-                    </li>
+            <ul class="image-container">
+                <li class="card">
+                    <img src="https://i.postimg.cc/KY3fSJ64/balcones.jpg" alt="balcon" class="deco">
+                    <p>Balcones</p>
+                </li>
+                    
+                <li class="card">
+                    <img src="https://i.postimg.cc/4yPbbM92/rejas.jpg" alt="reja" class="deco">
+                    <p>Rejas</p>
+                </li>
+                    
+                <li class="card">
+                    <img src="https://i.postimg.cc/zXDkXJss/portones.jpg" alt="porton" class="deco">
+                    <p>Portones</p>
+                </li>
+            </ul>
+        </div>
+    </div>
 
+    <div class="cat">
+        <div>
+            <div class="catalogo">
+                <a href="https://www.keha.com.ar/" target="_blank"><button>Mira nuestra tienda</button></a>
+            </div>
 
-                    <div class="responsive">
-                        <li class="gallery card">
-                            <img src="imagenes/rejas.JPG" alt="reja">
-                            <p class="item">Rejas</p>
-                        </li>
-                    </div>
-                    <div class="responsive">
-                        <li class="gallery card">
-                            <img src="imagenes/portones.jpg" alt="porton">
-                            <p class="item">Portones</p>
-                        </li>
-                    </div>
-                </ul>
+            <div>
+                <h4 class="cat-p">Ajustamos nuestro diseño a la medida que necesita cada cliente</h4>
+                <h4>Realizamos una atención personalizada para cada proyecto.</h4>
+            </div>
+
+            <div class="opcionales">
+                <h2>Opcionales</h2>
+                <h4>PINTADO / BASTIDOR / INSTALACIÓN</h4>
             </div>
         </div>
     </div>
-        <div class="cat">
-            <div>
-                <div class="catalogo">
-                    <!-- <h2>Catálogo</h2> -->
-                    <a href="https://www.keha.com.ar/"
-                        target="_blank"><button>Mira nuestra tienda</button></a>
-                </div>
 
-                <div>
-                    <h4 class="cat-p">Ajustamos nuestro diseño a la medida que necesita cada cliente</h4>
-                    <h4>Realizamos una atención personalizada para cada proyecto.</h4>
-                </div>
-
-                <div class="opcionales">
-                    <h2>Opcionales</h2>
-                    <h4>PINTADO / BASTIDOR / INSTALACIÓN</h4>
-                </div>
-            </div>
+    <footer class="">
+        <div>
+            <ul>
+                <li>
+                    <img src="https://i.postimg.cc/2yr7WmVB/Keha-Liso-2-TRANSPARENTE.png" class="logos" alt="logo Khea">
+                </li>
+                <li>
+                    <a href="https://www.keha.com.ar/" target="_blank"><button>TIENDA</button></a>
+                </li>
+                <li>
+                    <a href="http://wa.me/541151058244" target="_blank"><img src="https://i.postimg.cc/V6yRYXwg/whatsapp-1.png" class="wasap"
+                            alt="logo whatsapp"></a>
+                    <a href="http://wa.me/541151058244" target="_blank">
+                        <p>11 5105 8244</p>
+                    </a>
+                </li>
+            </ul>
         </div>
 
-        <footer class="">
-            <div>
-                <ul>
-                    <li>
-                        <img src="imagenes/Keha-Liso-2-TRANSPARENTE.png" class="logos" alt="logo Khea">         
-                    </li>
-                    <li>
-                        <a href="https://www.keha.com.ar/" target="_blank"><button>TIENDA</button></a>
-                    </li>
-                    <li>
-                        <a href="http://wa.me/541151058244" target="_blank"><img src="imagenes/whatsapp-1.png" class="wasap" alt="logo whatsapp"></a>
-                        <a href="http://wa.me/541151058244" target="_blank"><p>11 5105 8244</p></a>
-                    </li>
-                </ul>
-            </div>
-
-            <!--SCRIPTS ---------------------------------------------->
-            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-                integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-                crossorigin="anonymous"></script>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-                integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-                crossorigin="anonymous"></script>
-
-        </footer>
+     </footer>
 </body>
 
 </html>
